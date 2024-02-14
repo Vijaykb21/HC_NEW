@@ -4,6 +4,6 @@ cd backend
 npm i
 npm run dev
 
-for frontend
-cd frontend
-cd health
+for frontend-->
+cd frontend-->
+cd health--> npm i-->npm start
