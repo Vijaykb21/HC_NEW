@@ -5,24 +5,35 @@ import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from 'react-router-dom';
 import { createContext } from 'react';
 import "bootstrap/dist/css/bootstrap.css"
+import "bootstrap/dist/js/bootstrap"
 
 
 export const Context  = createContext({isAuthenticated:false});
 
 
 const AppWrapper = () =>{
-  const [isAuthenticated , setIsAuthenticated] = useState(false);
+  const [isAuthenticated , setIsAuthenticated] = useState(false);// this one is for patient
+  const [isAuthenticatedDoctor , setIsAuthenticatedDoctor] = useState(false);
+  const [isAuthenticatedReception , setIsAuthenticatedReception] = useState(false);
+  const [isAuthenticatedNurse , setIsAuthenticatedNurse] = useState(false);
+  const [isAuthenticatedMedical , setIsAuthenticatedMedical] = useState(false);
+  const [isAuthenticatedLab , setIsAuthenticatedLab] = useState(false);
+  const [isAuthenticatedApollo , setIsAuthenticatedApollo] = useState(false);
+
   const [loading  , setLoading] = useState(false);
   const [user, setUser] = useState({});
   
   return(
     <Context.Provider value={{
-      isAuthenticated,
-      setIsAuthenticated,
-      loading,
-      setLoading,
-      user, 
-      setUser
+      isAuthenticated,setIsAuthenticated,
+      isAuthenticatedReception , setIsAuthenticatedReception,
+      isAuthenticatedNurse , setIsAuthenticatedNurse,
+      isAuthenticatedMedical , setIsAuthenticatedMedical,
+      isAuthenticatedLab , setIsAuthenticatedLab,
+      isAuthenticatedApollo , setIsAuthenticatedApollo,
+      isAuthenticatedDoctor , setIsAuthenticatedDoctor,
+      loading,setLoading,
+      user,setUser
     }}>
     <App />
     </Context.Provider> 
