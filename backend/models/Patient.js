@@ -16,12 +16,11 @@ const schema = new mongoose.Schema({
     },  
     password: {
         type: String,
-        select: false,
         required: true,
     },
     createdAt: {
-        type: Date ,
-        default : Date.now,
+        type: Date,
+        default : Date.now(),
     },
 });
  
@@ -29,6 +28,3 @@ const schema = new mongoose.Schema({
 
 
 export const User = mongoose.model("patients_database" , schema );
-export const Doctor = mongoose.model("doctors_database" , schema );
-// export const User = mongoose.model("_database" , schema );
-// export const User = mongoose.model("patients_database" , schema );
